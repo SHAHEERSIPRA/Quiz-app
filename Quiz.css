@@ -1,0 +1,127 @@
+/* Resetting margins, padding, and box-sizing for consistency */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+/* Basic styles for the body */
+body {
+    background: #001e4d;
+    font-size: 16px; /* Set a base font size for scalability */
+}
+
+/* Styling for the app container */
+.app {
+    background: #fff;
+    width: 90%;
+    max-width: 600px;
+    margin: 5% auto; /* Margin adjusted to be responsive */
+    border-radius: 10px;
+    padding: 2rem; /* Using rem units for scalability */
+}
+
+/* Styling for headings */
+.app h1 {
+    font-size: 1.5rem; /* Use rem for scalable font size */
+    color: #001e4d;
+    font-weight: 600;
+    border-bottom: 1px solid #333;
+    padding-bottom: 1.5rem;
+}
+
+.quiz {
+    padding: 1rem 0; /* Use rem for scalable padding */
+}
+
+.quiz h2 {
+    font-size: 1.125rem; /* Scalable font size */
+    color: #001e4d;
+    font-weight: 600;
+}
+
+/* Styling for buttons */
+.btn {
+    background: #fff;
+    color: #222;
+    font-weight: 500;
+    width: 100%;
+    border: 1px solid #222;
+    padding: 0.625rem; /* Scalable padding */
+    margin: 0.625rem 0; /* Scalable margin */
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn:hover:not([disabled]) {
+    background: #222;
+    color: #fff;
+}
+
+.btn:disabled {
+    cursor: not-allowed; /* Correct value for disabled cursor */
+}
+
+/* Styling for the next button specifically */
+#next-button {
+    background: #001e4d;
+    color: #fff;
+    font-weight: 500;
+    width: 150px;
+    border: 0;
+    padding: 0.625rem;
+    margin: 1.25rem auto 0; /* Responsive margin */
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+}
+
+/* Styles for correct and incorrect feedback */
+.correct {
+    background-color: rgba(63, 143, 41, 0.6); /* rgba for better transparency control */
+}
+
+.incorrect {
+    background-color: rgba(197, 0, 9, 0.6); /* rgba for better transparency control */
+}
+
+/* Media queries for responsive adjustments */
+@media (max-width: 768px) {
+    .app {
+        width: 95%;
+        margin: 5% auto; /* Increased margin for smaller screens */
+        padding: 1.5rem; /* Reduced padding for smaller screens */
+    }
+
+    .app h1 {
+        font-size: 1.25rem; /* Scalable font size for smaller screens */
+    }
+
+    .quiz h2 {
+        font-size: 1rem; /* Scalable font size for smaller screens */
+    }
+
+    #next-button {
+        width: 100%; /* Full width on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .app {
+        margin: 3% auto; /* Reduced margin for very small screens */
+        padding: 1rem; /* Further reduced padding for very small screens */
+    }
+
+    .app h1 {
+        font-size: 1rem; /* Further reduced font size */
+    }
+
+    .quiz h2 {
+        font-size: 0.875rem; /* Further reduced font size */
+    }
+
+    #next-button {
+        width: 100%; /* Ensure button takes full width on very small screens */
+    }
+}
